@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        /*
+        const createClient = require('@supabase/supabase-js');
+
+        // Create a single supabase client for interacting with your database
+        const supabase = createClient('https://myxiklaowgdbpvlonfkf.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15eGlrbGFvd2dkYnB2bG9uZmtmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg5NjcwNTcsImV4cCI6MjAwNDU0MzA1N30.umgHrpJNTXDfMfIGFTJL57QNMlmx16o5y32cglIrz2E')
+        */
+
+        const { createClient } = supabase
+        const _supabase = createClient('https://myxiklaowgdbpvlonfkf.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15eGlrbGFvd2dkYnB2bG9uZmtmIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg5NjcwNTcsImV4cCI6MjAwNDU0MzA1N30.umgHrpJNTXDfMfIGFTJL57QNMlmx16o5y32cglIrz2E')
+        console.log('Supabase Instance: ', _supabase)
+        console.log(_supabase.getChannels());
+    </script>
+
+    
+
+</head>
+<body>
+
+    <script>
+        _supabase
+        .channel('any')
+        .on('postgres_changes', { event: '*', schema: '*' }, payload => {
+            console.log('Change received!', payload)
+        })
+        .subscribe()
+
+    </script>
+    
+</body>
+</html>
