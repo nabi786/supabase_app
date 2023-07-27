@@ -12,13 +12,6 @@ app.use(express.urlencoded({extended : false}))
 
 
 
-console.log("working here")
-console.log("workging on git sqaush")
-
-
-console.log("Naib Baksh last test")
-
-
 // codfadf 
 app.get("/getAllData", async(req,res)=>{
     try{
