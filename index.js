@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended : false}))
 
 
 
-
+// codfadf 
 app.get("/getAllData", async(req,res)=>{
     try{
 
